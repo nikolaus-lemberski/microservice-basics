@@ -1,0 +1,16 @@
+spring:  
+  cloud:
+    gateway:
+      routes:
+        - id: foo
+          uri: http://foo.dev.cfdev.sh/
+          predicates:
+          - Path=/foo/**
+          filters:
+          - StripPrefix=1
+        - id: bar
+          uri: http://bar.dev.cfdev.sh/
+          predicates:
+          - Path=/bar/**
+          filters:
+          - StripPrefix=1

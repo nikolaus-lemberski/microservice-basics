@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: foo
+    cloud:
+        config:
+            uri: http://configserver.dev.cfdev.sh
+        
