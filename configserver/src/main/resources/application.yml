@@ -6,3 +6,8 @@ spring:
             server:
                 native:
                     searchLocations: classpath:/config
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"

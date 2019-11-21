@@ -1,2 +1,7 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 path:
     bar: http://bar.dev.cfdev.sh/
