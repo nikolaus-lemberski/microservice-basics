@@ -14,4 +14,4 @@ https://network.pivotal.io/products/pcfdev
 
 Starting local pcf:
 
-`cf dev start -f Documents/pcfdev-v1.2.0-darwin.tgz`
+`cf dev start -f Downloads/pcfdev-v1.2.0-darwin.tgz`

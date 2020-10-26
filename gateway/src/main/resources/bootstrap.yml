@@ -3,5 +3,5 @@ spring:
         name: gateway
     cloud:
         config:
-            uri: http://configserver.dev.cfdev.sh
-    
+            uri: http://localhost:8090
+            fail-fast: true

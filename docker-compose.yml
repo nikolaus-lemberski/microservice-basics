@@ -1,0 +1,30 @@
+version: '3'
+services:
+  configserver:
+    image: docker.io/library/configserver:0.0.1-SNAPSHOT
+    ports:
+      - "8090:8090"
+    environment:
+      PROFILE: "native"
+      SERVER_PORT: "8090"
+  gateway:
+    image: docker.io/library/gateway:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_PORT: "8080"
+      SPRING_CLOUD_CONFIG_URI: "http://configserver:8090"
+  foo:
+    image: docker.io/library/foo:0.0.1-SNAPSHOT
+    ports:
+      - "61010:61010"
+    environment:
+      SERVER_PORT: "61010"
+      SPRING_CLOUD_CONFIG_URI: "http://configserver:8090"
+  bar:
+    image: docker.io/library/bar:0.0.1-SNAPSHOT
+    ports:
+      - "61011:61011"
+    environment:
+      SERVER_PORT: "61011"
+      SPRING_CLOUD_CONFIG_URI: "http://configserver:8090"

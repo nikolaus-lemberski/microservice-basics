@@ -8,13 +8,13 @@ spring:
     gateway:
       routes:
         - id: foo
-          uri: http://foo.dev.cfdev.sh/
+          uri: http://foo:61010/
           predicates:
           - Path=/foo/**
           filters:
           - StripPrefix=1
         - id: bar
-          uri: http://bar.dev.cfdev.sh/
+          uri: http://bar:61011/
           predicates:
           - Path=/bar/**
           filters:

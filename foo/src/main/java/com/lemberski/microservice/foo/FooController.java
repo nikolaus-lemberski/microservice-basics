@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class FooController {
 
-    @Value("${path.bar:https://dummy}")
+    @Value("${path.bar:http://DUMMY}")
     private String barPath;
 
     @Autowired

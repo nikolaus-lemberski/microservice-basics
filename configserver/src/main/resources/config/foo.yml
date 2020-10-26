@@ -4,4 +4,4 @@ management:
       exposure:
         include: "*"
 path:
-    bar: http://bar.dev.cfdev.sh/
+    bar: http://bar:61011/
