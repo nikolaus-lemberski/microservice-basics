@@ -5,3 +5,11 @@ management:
         include: "*"
 path:
     bar: http://bar:61011/
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
